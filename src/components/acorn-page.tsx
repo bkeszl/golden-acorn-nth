@@ -8,7 +8,7 @@ const AcornPage = () => {
   const [acorns, setAcorns] = useState<any[]>([]);
 
   useEffect(() => {
-    let tempAcorns: any[] = [];
+    let tempAcorns: JSX.Element[] = [];
     _.times(counter, () => {
       tempAcorns.push(<span>🌰</span>)
     });
@@ -31,7 +31,7 @@ const AcornPage = () => {
       <Button toExecute={increment} str='Buy one'/>
       <Display >
         <div className='belso'>
-          {acorns} 🌰
+          {acorns}
         </div>
       </Display>
       <Button toExecute={decrement} str='Eat one'/>
